@@ -85,7 +85,7 @@ namespace Pit::Test {
 	bool TEST_##name::s_registered = Pit::Test::_PitTestsRegister::Register<TEST_##name>()
 
 #define PIT_TEST(name, func)									\
-	PIT_TEST_BASETEST(name, { func })
+	PIT_TEST_BASETEST(name, { func return true; })
 
 #define PIT_TEST_EQUALS(name, val1, val2)						\
 	Pit::Test::SetConsoleColor(CONSOLE_WHITE);					\
