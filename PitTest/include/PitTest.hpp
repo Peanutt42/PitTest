@@ -35,7 +35,7 @@ namespace Pit::Test {
 	
 	static HANDLE consoleColor = GetStdHandle(STD_OUTPUT_HANDLE);
 	FORCEINLINE void SetConsoleColor(int color) {
-		SetConsoleTextAttribute(consoleColor, color);
+		SetConsoleTextAttribute(consoleColor, static_cast<WORD>(color));
 	}
 #elif __linux__     // !!! UNTESTED !!!
 #define CONSOLE_RED		31
