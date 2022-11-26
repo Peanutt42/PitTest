@@ -89,7 +89,7 @@ namespace Pit::Test {
 
 #define PIT_TEST_EQUALS(name, val1, val2)						\
 	Pit::Test::SetConsoleColor(CONSOLE_WHITE);					\
-	std::cout << #name;											\
+	std::cout << name;											\
 	if (val1 == val2) {											\
 		Pit::Test::SetConsoleColor(CONSOLE_GREEN);				\
 		std::cout << " [OK]\n";									\
@@ -101,7 +101,7 @@ namespace Pit::Test {
 
 #define PIT_TEST_DIFFRENCE(name, val1, val2)					\
 	Pit::Test::SetConsoleColor(CONSOLE_WHITE);					\
-	std::cout << #name;											\
+	std::cout << name;											\
 	if (val1 != val2) {											\
 		Pit::Test::SetConsoleColor(CONSOLE_GREEN);				\
 		std::cout << " [OK]\n";									\
@@ -113,7 +113,7 @@ namespace Pit::Test {
 
 #define PIT_TEST_TRUE(name, result)								\
 	Pit::Test::SetConsoleColor(CONSOLE_WHITE);					\
-	std::cout << #name;											\
+	std::cout << name;											\
 	if (result) {												\
 		Pit::Test::SetConsoleColor(CONSOLE_GREEN);				\
 		std::cout << " [OK]\n";									\
@@ -126,7 +126,7 @@ namespace Pit::Test {
 #define PIT_TEST_TRY_FUNC(name, func)							\
 	{															\
 	Pit::Test::SetConsoleColor(CONSOLE_WHITE);					\
-	std::cout << #name;											\
+	std::cout << name;											\
 	try {														\
 		func();													\
 	}															\
@@ -153,7 +153,7 @@ namespace Pit::Test {
 	{															\
 	bool failed = false;										\
 	Pit::Test::SetConsoleColor(CONSOLE_WHITE);					\
-	std::cout << #name;											\
+	std::cout << name;											\
 	try {														\
 		{ lamda	}												\
 	}															\
