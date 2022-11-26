@@ -26,7 +26,9 @@ namespace Pit::Test {
 			return true;
 		}
 	};
+#ifdef PIT_TEST_MAIN
 	std::vector<_PitTestEntry> _PitTestsRegister::Tests;
+#endif
 
 #if _WIN32 || _WIN64
 #define CONSOLE_RED		4
@@ -49,7 +51,7 @@ namespace Pit::Test {
 
 
 
-	void RunAllPitTests() {
+	static void RunAllPitTests() {
 		SetConsoleColor(CONSOLE_GREEN);
 		std::cout << "[PitTest]\n";
 		int testsFailed = 0;
@@ -176,7 +178,9 @@ namespace Pit::Test {
 	}															\
 	}
 
+#ifdef PIT_TEST_MAIN
 int main() {
 	Pit::Test::RunAllPitTests();
 	std::cin.get();
 }
+#endif

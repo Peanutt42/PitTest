@@ -1,4 +1,6 @@
+#define PIT_TEST_MAIN
 #include <PitTest.hpp>
+
 
 PIT_TEST(SomeTestGroup, 
 	PIT_TEST_TRY_LAMDA("SomeShortTest", Sleep(400););
