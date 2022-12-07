@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="src\SomeOtherTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PitTest\PitTest.vcxproj">
