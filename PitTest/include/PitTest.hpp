@@ -51,7 +51,7 @@ namespace Pit::Test {
 
 
 
-	static void RunAllPitTests() {
+	[[maybe_unused]] static void RunAllPitTests() {
 		SetConsoleColor(CONSOLE_GREEN);
 		std::cout << "[PitTest]\n";
 		int testsFailed = 0;
